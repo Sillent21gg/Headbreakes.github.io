@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo.png">
+    <title>Головоломки</title>
+    <link href="sudoku.css" rel="stylesheet" type="text/css"/>
+    
+</head>
+<body>
+    <wrapper class="wrapper">
+
+        <header class="header">
+            <ul class="header_list">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#info">Информация</a></li>
+                <li><a href="#magic-square">Магический квадрат</a></li>
+                <li><a href="#sort">Сортировка</a></li>
+                <li><a href="#nonogram">Нонограмма</a></li>
+                <li><a href="#matches">Спички</a></li>
+                <li><a href="#sudoku">Судоку</a></li>
+                <li><a href="#filwords">Филворды</a></li>
+            </ul>
+        </header>
+
+        <header class="header_ph">
+            <img src="img/menu.png" alt="" class="header_menu" id="header_ph" onclick="ListSidebar">
+        </header>
+        
+        <main class="main">
+<div class="sidebar_unactive" id="sidebar">
+            <ul class="header_ph_list">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#info">Информация</a></li>
+                <li><a href="#magic-square">Магический квадрат</a></li>
+                <li><a href="#sort">Сортировка</a></li>
+                <li><a href="#nonogram">Нонограмма</a></li>
+                <li><a href="#matches">Спички</a></li>
+                <li><a href="#sudoku">Судоку</a></li>
+                <li><a href="#filwords">Филворды</a></li>
+            </ul>
+        </div>
+            <section class="info" id="info">
+
+                <div class="info_sudoku"><img src="img/Sudoku.jpg" alt="" class="info_sudoku_img">
+                <hr class="vertical">
+                <p class="info_sudoku_P">Судоку — головоломка с числами, латинским квадратом 9-го порядка.
+
+                    Игровое поле представляет собой квадрат размером 9×9, разделённый на меньшие квадраты со стороной в 3 клетки. В начале игры в клетках стоят числа от 1 до 9, называемые подсказками.
+                    
+                    Задача игрока — заполнить свободные клетки цифрами от 1 до 9 так, чтобы в каждой строке, в каждом столбце и в каждом малом квадрате 3×3 каждая цифра встречалась только один раз.</p>
+                </div>
+
+                <div class="info_nonogram"><p class="info_nonogram_P">Японский кроссворд - головоломка, в которой с помощью цифр зашифровано некоторое изображение. Целью головоломки является полное восстановление этого изображения.
+                    При решении японских кроссвордов человек рассматривает каждую строку/столбец в отдельности, постоянно переходя к следующим столбцам и строкам. При этом процесс решения в каждой строке/столбце сводится к:
+
+Определение клеток, которые точно будут закрашены (при любом возможном расположении групп) - их мы и закрашиваем.
+Определение клеток, в которых наличие закрашенных клеток невозможно - такие клетки зачеркиваются крестиком (иногда вместо крестика используется жирная точка).
+Определение цифр, положение которых уже вычислено - обычно эти цифры зачеркиваются.
+                </p>
+                    <hr class="vertical">
+                    <img src="img/nonogram.png" alt="" class="info_nonogram_img"></div>
+
+                <div class="info_magic-square"><img src="img/MS.jpg" alt="" class="info_MS">
+                    <hr class="vertical">
+                    <p class="info_magic-square_P">Маги́ческий, или волше́бный квадра́т — квадратная таблица, заполненная различными числами таким образом, что сумма чисел в каждой строке, каждом столбце и на обеих диагоналях одинакова. Если в квадрате равны суммы чисел только в строках и столбцах, то он называется полумагическим.</p></div>
+
+                <div class="info_filwords">
+                    <p class="info_philwords_P">Для разгадывания предлагается сетка с заранее проставленными буквами. Даются задания - определения с указанием количества букв в ответе. Задача - найти и вычеркнуть слово-ответ в сетке. Слова могут ломаться по горизонтали и вертикали, но не могут ломаться по диагонали. Сетка очень похожа на сетку сканворда, исключаются слова из 2-3 букв. Каждая буква филворда принадлежит одному слову.</p>
+                    <hr class="vertical">
+                    <img src="img/philwords.jpg" alt="" class="info_philwords_img"></div>
+
+                    <div class="info_sort"><img src="img/tower-of-hanoi.png" alt="" class="info_sort_img">
+                        <hr class="vertical">
+                        <p class="info_sort_P">Ханойская башня является одной из популярных головоломок XIX века. Даны три стержня, на один из которых нанизаны восемь колец, причём кольца отличаются размером и лежат меньшее на большем. Задача состоит в том, чтобы перенести пирамиду из восьми колец за наименьшее число ходов на другой стержень. За один раз разрешается переносить только одно кольцо, причём нельзя класть большее кольцо на меньшее.</p>
+                        </div>
+            </section>
+
+            <h1>Магический квадрат</h1>
+
+            <section class="magic-square" id="magic-square">
+                
+                <div class="lvl1"><table class="ms_lvl1">
+                    <h2 class="h2_lvl1">LvL1</h2>
+                    <tr>
+                        <td class="ms_num0" id="inp1"><input type="text" id="lvl1_num1" class="lvl1_a" maxlength="1"></td>
+                        <td>+</td>
+                        <td class="ms_num0" id="inp2"><input type="text" id="lvl1_num2" class="lvl1_b" maxlength="1"></td>
+                        <td><input type="number" class="ab" value="" readonly></td>
+                    </tr>
+                    <tr><td>+</td>
+                        <td></td>
+                        <td>+</td>
+                        <td></td>
+                    </tr>
+                    <tr><td class="ms_num0" id="inp3"><input type="text" id="lvl1_num3" class="lvl1_c" maxlength="1"></td>
+                        <td>+</td>
+                        <td class="ms_num0" id="inp4"><input type="text" id="lvl1_num4" class="lvl1_d" maxlength="1"></td>
+                        <td><input type="number" class="cd" value="" readonly></td>
+                    </tr>
+                    <tr><td><input type="number" class="ad" value="" readonly></td>
+                        <td></td>
+                        <td><input type="number" class="bc" value="" readonly></td>
+                        <td></td>
+                    </tr>
+                </table>
+                <button onclick="Test" id="lvl1_test" class="lvl1_test">Проверить</button></div>
+
+                <div class="lvl2"><table class="ms_lvl2">
+                    <h2 class="h2_lvl2">LvL2</h2>
+                    <tr>
+                        <td class="ms_num02" id="inp12"><input type="text" id="lvl2_num1" class="lvl1_a" maxlength="2"></td>
+                        
+                        <td class="ms_num02" id="inp22"><input type="text" id="lvl2_num2" class="lvl1_b" maxlength="2"></td>
+                        <td class="ms_num02" id="inp32"><input type="text" id="lvl2_num3" class="lvl1_c" maxlength="2"></td>
+                        <td><input type="number" class="k" value="" readonly></td>
+                    </tr>
+                    <tr><td class="ms_num02" id="inp42"><input type="text" id="lvl2_num4" class="lvl1_d" maxlength="2"></td>
+                        <td class="ms_num02" id="inp52"><input type="text" id="lvl2_num5" class="lvl1_e" maxlength="2"></td>
+                        <td class="ms_num02" id="inp62"><input type="text" id="lvl2_num6" class="lvl1_f" maxlength="2"></td>
+                        <td><input type="number" class="k" value="" readonly></td>
+                    </tr>
+                    <tr><td class="ms_num02" id="inp72"><input type="text" id="lvl2_num7" class="lvl1_g" maxlength="2"></td>
+                        <td class="ms_num02" id="inp82"><input type="text" id="lvl2_num8" class="lvl1_h" maxlength="2"></td>
+                        <td class="ms_num02" id="inp92"><input type="text" id="lvl2_num9" class="lvl1_i" maxlength="2"></td>
+                        <td><input type="number" class="k" value="" readonly></td>
+                    </tr>
+                    <tr><td><input type="number" class="k" value="" readonly></td>
+                        <td><input type="number" class="k" value="" readonly></td>
+                        <td><input type="number" class="k" value="" readonly></td>
+                        <td></td>
+                    </tr>
+                </table>
+                <button onclick="Test2" id="lvl2_test" class="lvl2_test">Проверить</button></div>
+            </section>
+<!-- 
+            <h1>Спички</h1>
+ <div class="coming_soon" id="coming_soon" onclick="coming_soon">
+                    <h2>Скоро</h2>
+                </div>
+            <section class="matches" id="matches"> 
+               
+                <div class="matches_number1"> 
+                    <button class="match_unactive match_num1_1 gor" id="match_num1_1"></button>
+                    <br>
+                    <button class="match_unactive match_num2_1 ver" id="match_num2_1"></button>
+                    <button class="match_unactive match_num3_1 ver" id="match_num3_1"></button>
+                    <br>
+                    <button class="match_unactive match_num4_1 gor" id="match_num4_1"></button>
+                    <br>
+                    <button class="match_unactive match_num5_1 ver" id="match_num5_1"></button>
+                    <button class="match_unactive match_num6_1 ver" id="match_num6_1"></button>
+                    <br>
+                    <button class="match_unactive match_num7_1 gor" id="match_num7_1"></button>
+                    <br>
+                    
+                </div>
+                <div class="plus"></div>
+                <div class="matches_number2"> 
+                    <button class="match_unactive match_num1_2 gor" id="match_num1_2"></button>
+                    <br>
+                    <button class="match_unactive match_num2_2 ver" id="match_num2_2"></button>
+                    <button class="match_unactive match_num3_2 ver" id="match_num3_2"></button>
+                    <br>
+                    <button class="match_unactive match_num4_2 gor" id="match_num4_2"></button>
+                    <br>
+                    <button class="match_unactive match_num5_2 ver" id="match_num5_2"></button>
+                    <button class="match_unactive match_num6_2 ver" id="match_num6_2"></button>
+                    <br>
+                    <button class="match_unactive match_num7_2 gor" id="match_num7_2"></button>
+                    <br>
+                     </div>
+               <div class="equal">&#61;</div>
+                <div class="matches_number3"> 
+                    <button class="match_unactive match_num1_3 gor" id="match_num1_3"></button>
+                    <br>
+                    <button class="match_unactive match_num2_3 ver" id="match_num2_3"></button>
+                    <button class="match_unactive match_num3_3 ver" id="match_num3_3"></button>
+                    <br>
+                    <button class="match_unactive match_num4_3 gor" id="match_num4_3"></button>
+                    <br>
+                    <button class="match_unactive match_num5_3 ver" id="match_num5_3"></button>
+                    <button class="match_unactive match_num6_3 ver" id="match_num6_3"></button>
+                    <br>
+                    <button class="match_unactive match_num7_3 gor" id="match_num7_3"></button>
+                    <br>
+                    
+                </div>
+                <div class="matches_panel">
+                    <button onclick="test3" id="Matches_test" class="Matches_test">Проверить</button>
+                    <input type="number" readonly class="MatchCounter"></div>
+            </section>-->
+
+            <h1>Сортировка</h1>
+            <section class="sort" id="sort">
+                <table class="sort_table">
+                    
+                    <tr>
+                        <td class="sort_td"><input type="button" value="1" id="sort_num1_1" class="col1" readonly></td>
+                        <td class="sort_td"><input type="button" value="" id="sort_num1_2" class="col2" readonly></td>
+                        <td class="sort_td"><input type="button" value="" id="sort_num1_3" class="col3" readonly></td>
+                    </tr>
+                    <tr>
+                        <td class="sort_td"><input type="button" value="2" id="sort_num2_1" class="col1" readonly></td>
+                        <td class="sort_td"><input type="button" value="" id="sort_num2_2" class="col2" readonly></td>
+                        <td class="sort_td"><input type="button" value="" id="sort_num2_3" class="col3" readonly></td>
+                    </tr>
+                    <tr>
+                        <td class="sort_td"><input type="button" value="3" id="sort_num3_1" class="col1" readonly></td>
+                        <td class="sort_td"><input type="button" value="" id="sort_num3_2" class="col2" readonly></td>
+                        <td class="sort_td"><input type="button" value="" id="sort_num3_3" class="col3" readonly></td>
+                    </tr>
+                    <tr>
+                        <td class="sort_td"><input type="button" value="4" id="sort_num4_1" class="col1" readonly></td>
+                        <td class="sort_td"><input type="button" value="" id="sort_num4_2" class="col2" readonly></td>
+                        <td class="sort_td"><input type="button" value="" id="sort_num4_3" class="col3" readonly></td>
+                    </tr>
+                    <tr>
+                        <td class="sort_td"><input type="button" value="5" id="sort_num5_1" class="col1" readonly></td>
+                        <td class="sort_td"><input type="button" value="" id="sort_num5_2" class="col2" readonly></td>
+                        <td class="sort_td"><input type="button" value="" id="sort_num5_3" class="col3" readonly></td>
+                    </tr>
+                    <tr>
+                        <td class="sort_td"><input type="button" value="6" id="sort_num6_1" class="col1" readonly ></td>
+                        <td class="sort_td"><input type="button" value="" id="sort_num6_2" class="col2" readonly></td>
+                        <td class="sort_td"><input type="button" value="" id="sort_num6_3" class="col3" readonly></td>
+                    </tr>
+                    <tr>
+                        <td class="sort_td"><input type="button" value="7" id="sort_num7_1" class="col1" readonly></td>
+                        <td class="sort_td"><input type="button" value="" id="sort_num7_2" class="col2" readonly></td>
+                        <td class="sort_td"><input type="button" value="" id="sort_num7_3" class="col3" readonly></td>
+                    </tr>
+                    <tr>
+                        <td class="sort_td"><input type="button" value="8" id="sort_num8_1" class="col1" readonly></td>
+                        <td class="sort_td"><input type="button" value="" id="sort_num8_2" class="col2" readonly></td>
+                        <td class="sort_td"><input type="button" value="" id="sort_num8_3" class="col3" readonly></td>
+                    </tr>
+                    <tr>
+                        <td class="click_but sort_td"><input type="button" class="click_but"  id="col1" readonly onclick="pickCol1"></td>
+                        <td class="click_but sort_td"><input type="button" class="click_but"  id="col2" readonly onclick="pickCol2"></td>
+                        <td class="click_but sort_td"><input type="button" class="click_but"  id="col3" readonly onclick="pickCol3"></td>
+                    </tr>
+                </table>
+            </section>
+
+            <!-- <h1>Судоку</h1>
+
+            <section class="sudoku" id="sudoku"></section> -->
+
+            <h1>Нонограмма</h1>
+
+            <section class="nonogram" id="nonogram">
+                <div id="game"></div>
+            </section>
+
+            <!-- <h1>Филворды</h1>
+
+            <section class="filwords" id="filwords"></section> -->
+            
+        </main>
+
+        <footer class="footer">
+
+        </footer>
+
+    </wrapper>
+    <script type="text/javascript" src="sudoku.js"></script>
+    <script type="text/javascript" src="nonogram.js"></script>
+</body>
+</html>
