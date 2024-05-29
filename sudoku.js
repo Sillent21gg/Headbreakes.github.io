@@ -83,61 +83,59 @@ ab.value = a+b;
     var lvl2_g = Number (document.getElementById("lvl2_num7").value);
     var lvl2_h = Number (document.getElementById("lvl2_num8").value);
     var lvl2_i = Number (document.getElementById("lvl2_num9").value);
-    if((lvl2_a + lvl2_b + lvl2_c != k_num)||(lvl2_a == lvl2_b||lvl2_b==lvl2_c||lvl2_a==lvl2_c)){
-      document.getElementById("inp12").classList.remove('ms_num1');
-      document.getElementById("inp22").classList.remove('ms_num1'); 
-      document.getElementById("inp32").classList.remove('ms_num1'); 
-    } else {
-      document.getElementById("inp12").classList.add('ms_num1');
-      document.getElementById("inp22").classList.add('ms_num1');
-      document.getElementById("inp32").classList.add('ms_num1');
+    if(lvl2_a + lvl2_b + lvl2_c != k_num){
+      document.getElementById("ms_rslt21").classList.remove('ms_num1');
+    }else {
+      document.getElementById("ms_rslt21").classList.add('ms_num1');
     }
-    if((lvl2_d + lvl2_e + lvl2_f != k_num)||(lvl2_d == lvl2_e||lvl2_e==lvl2_f||lvl2_d==lvl2_f)){
-      document.getElementById("inp42").classList.remove('ms_num1');
-      document.getElementById("inp52").classList.remove('ms_num1');
-      document.getElementById("inp62").classList.remove('ms_num1');
+    if(lvl2_d + lvl2_e + lvl2_f != k_num){
+      document.getElementById("ms_rslt22").classList.remove('ms_num1');
     } else{
-      document.getElementById("inp42").classList.add('ms_num1');
-      document.getElementById("inp52").classList.add('ms_num1');
-      document.getElementById("inp62").classList.add('ms_num1');
+      document.getElementById("ms_rslt22").classList.add('ms_num1');
     }
-    if((lvl2_g + lvl2_h + lvl2_i != k_num)||(lvl2_g == lvl2_h||lvl2_h==lvl2_i||lvl2_g==lvl2_i)){
-      document.getElementById("inp72").classList.remove('ms_num1');
-      document.getElementById("inp82").classList.remove('ms_num1');
-      document.getElementById("inp92").classList.remove('ms_num1');
+    if(lvl2_g + lvl2_h + lvl2_i != k_num){
+      document.getElementById("ms_rslt23").classList.remove('ms_num1');
     }else{
-      document.getElementById("inp72").classList.add('ms_num1');
-      document.getElementById("inp82").classList.add('ms_num1');
-      document.getElementById("inp92").classList.add('ms_num1');
+      document.getElementById("ms_rslt23").classList.add('ms_num1');
     }
-    if((lvl2_a + lvl2_d + lvl2_g != k_num)||(lvl2_a == lvl2_d||lvl2_g==lvl2_d||lvl2_a==lvl2_g)){
-      document.getElementById("inp12").classList.remove('ms_num1');
-      document.getElementById("inp42").classList.remove('ms_num1'); 
-      document.getElementById("inp72").classList.remove('ms_num1'); 
+    if(lvl2_a + lvl2_d + lvl2_g != k_num){
+      document.getElementById("ms_rslt24").classList.remove('ms_num1');
     } else{
-      document.getElementById("inp12").classList.add('ms_num1');
-      document.getElementById("inp42").classList.add('ms_num1');
-      document.getElementById("inp72").classList.add('ms_num1');
+      document.getElementById("ms_rslt24").classList.add('ms_num1');
     }
-    if((lvl2_b + lvl2_e + lvl2_h != k_num)||(lvl2_b == lvl2_e||lvl2_e==lvl2_h||lvl2_b==lvl2_h)){
-      document.getElementById("inp22").classList.remove('ms_num1');
-      document.getElementById("inp52").classList.remove('ms_num1');
-      document.getElementById("inp82").classList.remove('ms_num1');
+    if(lvl2_b + lvl2_e + lvl2_h != k_num){
+      document.getElementById("ms_rslt25").classList.remove('ms_num1');
     } else{
-      document.getElementById("inp22").classList.add('ms_num1');
-      document.getElementById("inp52").classList.add('ms_num1');
-      document.getElementById("inp82").classList.add('ms_num1');
+      document.getElementById("ms_rslt25").classList.add('ms_num1');
     }
-    if((lvl2_c + lvl2_f + lvl2_i != k_num)||(lvl2_c == lvl2_f||lvl2_f==lvl2_i||lvl2_c==lvl2_i)){
-      document.getElementById("inp32").classList.remove('ms_num1');
-      document.getElementById("inp62").classList.remove('ms_num1');
-      document.getElementById("inp92").classList.remove('ms_num1');
+    if(lvl2_c + lvl2_f + lvl2_i != k_num){
+      document.getElementById("ms_rslt26").classList.remove('ms_num1');
     }else{
-      document.getElementById("inp32").classList.add('ms_num1');
-      document.getElementById("inp62").classList.add('ms_num1');
-      document.getElementById("inp92").classList.add('ms_num1');
+      document.getElementById("ms_rslt26").classList.add('ms_num1');
     }
-  console.log(lvl2_a, lvl2_b, lvl2_c, lvl2_d, lvl2_e, lvl2_f, lvl2_g, lvl2_h, lvl2_i, k_num)}
+    
+   var arr = [lvl2_a, lvl2_b, lvl2_c, lvl2_d, lvl2_e, lvl2_f, lvl2_g, lvl2_h, lvl2_i];
+   var lvl2_cor = 0;
+   for (let i = 0; i < 8; i++){
+    for (let j = i++; j < 9; j++){
+    // console.log(arr[i], arr[j]);
+      if (arr[i] == arr[j]){
+        lvl2_cor = 1;
+      } else{
+        lvl2_cor = 0;
+      }
+    }}
+     if(lvl2_cor == 0){
+        document.getElementById("ms_lvl2_rslt").classList.remove('ms_lvl2_rslt_F');        
+        document.getElementById("ms_lvl2_rslt").classList.remove('ms_lvl2_rslt_T');
+        document.getElementById("ms_lvl2_rslt").classList.add('ms_lvl2_rslt_T');
+    }else{
+      document.getElementById("ms_lvl2_rslt").classList.remove('ms_lvl2_rslt_T');
+      document.getElementById("ms_lvl2_rslt").classList.remove('ms_lvl2_rslt_F');
+        document.getElementById("ms_lvl2_rslt").classList.add('ms_lvl2_rslt_F');
+   }
+   console.log(lvl2_cor, arr);
+  }
 
   // MATCHES
  /* MatchNum1 = getRandomIntMatches(10);
